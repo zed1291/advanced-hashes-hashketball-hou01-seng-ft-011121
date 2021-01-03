@@ -172,9 +172,9 @@ def team_colors team_name
   colors = nil
   game_hash.each do |key, value|
     # p key
-    if game_hash[key][:team_name] == team_name
+    if value[:team_name] == team_name
       # p "hello?"
-      colors = game_hash[key][:colors]
+      colors = value[:colors]
     end
   end
   colors
