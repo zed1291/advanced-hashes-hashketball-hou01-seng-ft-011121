@@ -163,23 +163,6 @@ def team_names
   team_names
 end
 
-def player_numbers player_name
-  number = nil
-  game_hash[:home][:players].each do |key|
-    if key[:player_name] == player_name
-      number = key[:number]
-    end
-  end
-  if number == nil
-    game_hash[:away][:players].each do |key|
-      if key[:player_name] == player_name
-        number = key[:number]
-      end
-    end
-  end
-  number
-end
-
 def player_numbers team_name
   numbers = []
     game_hash.each do |key, value|
