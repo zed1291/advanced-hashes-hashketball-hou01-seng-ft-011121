@@ -1,4 +1,3 @@
-# Write your code below game_hash
 def game_hash
   {
     home: {
@@ -127,24 +126,13 @@ def game_hash
 end
 
 def num_points_scored player_name
-  points = nil
-  game_hash[:home][:players].each do |key|
-    # p key[:player_name]
-    if key[:player_name] == player_name
-      # p "are we getting here?"
-      points = key[:points]
-    end
-  end
-  if points == nil
-    game_hash[:away][:players].each do |key|
-    # p key[:player_name]
+  game_hash.each do |key, value|
+    value[:players].each do |key|
       if key[:player_name] == player_name
-        # p "are we getting here?"
-        points = key[:points]
+        return key[:points]
       end
     end
   end
-  points
 end
 
 def shoe_size player_name
