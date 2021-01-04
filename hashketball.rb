@@ -148,9 +148,7 @@ end
 def team_colors team_name
   colors = nil
   game_hash.each do |key, value|
-    # p key
     if value[:team_name] == team_name
-      # p "hello?"
       colors = value[:colors]
     end
   end
