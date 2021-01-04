@@ -222,10 +222,12 @@ def player_stats player_name
   stats = nil
   game_hash.each do |key, value|
     value[:players].each do |key|
-      if key[:player_name] == player_name
+      if key[:player_name] == player_name 
         stats = key
       end
     end
   end
   stats
 end
+
+
