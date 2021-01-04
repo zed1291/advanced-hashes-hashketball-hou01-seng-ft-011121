@@ -223,12 +223,6 @@ def player_stats player_name
   game_hash.each do |key, value|
     value[:players].each do |key|
       if key[:player_name] == player_name
-        # key.each do |key, value|
-          # if value.class == Integer
-          #   stats << value
-          # end
-          # p key
-        # end
         stats = key
       end
     end
