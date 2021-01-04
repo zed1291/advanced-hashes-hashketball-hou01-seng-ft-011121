@@ -204,3 +204,16 @@ def player_numbers player_name
   end
   number
 end
+
+def player_numbers team_name
+  numbers = []
+    game_hash.each do |key, value|
+      if value[:team_name] == team_name
+        value[:players].each do |hash|
+          hash
+          numbers << hash[:number]
+        end
+      end
+    end
+  numbers
+end
