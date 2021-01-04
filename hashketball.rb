@@ -183,11 +183,7 @@ end
 def team_names
   team_names = []
   game_hash.each do |key, value|
-    # p key
-    # p value
-    # p game_hash[key][:team_name]
-    value[:team_name]
-    # team_names.push(value[:team_name])
+    team_names << value[:team_name]
   end
-  # team_names
+  team_names
 end
