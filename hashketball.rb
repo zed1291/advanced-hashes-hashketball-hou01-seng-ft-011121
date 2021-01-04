@@ -217,3 +217,19 @@ def player_numbers team_name
     end
   numbers
 end
+
+def player_stats player_name
+  stats = []
+  game_hash.each do |key, value|
+    value[:players].each do |key|
+      if key[:player_name] == player_name
+        key.each do |key, value|
+          if value.class == Integer
+            stats << value
+          end
+        end
+      end
+    end
+  end
+  stats
+end
